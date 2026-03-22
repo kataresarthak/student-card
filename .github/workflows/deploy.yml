@@ -1,4 +1,7 @@
-name: Deploy to GitHub Pages
+name: Deploy Pages (Node22)
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
   push:
@@ -7,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-pages:
     runs-on: ubuntu-latest
     permissions:
       contents: read
